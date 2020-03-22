@@ -4,4 +4,4 @@
 
   tasks:
     - name: install updates
-      yum: name=* state=latest use_backend=yum4
+      yum: name=* state=latest use_backend=yum3
