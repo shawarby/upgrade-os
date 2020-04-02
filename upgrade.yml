@@ -7,4 +7,4 @@
       yum: 
         name: '*' 
         state: latest 
-        use_backend: yum3
+        use_backend: yum4
