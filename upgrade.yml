@@ -1,11 +1,13 @@
 - hosts: "{{ vm_name }}" 
-  ansible_become: true
   gather_facts: False
   connection: local
 
   tasks:
     - name: install updates
+      become: yes
+      become_user: root
       yum: 
         name: '*' 
         state: latest 
         use_backend: yum4
+
