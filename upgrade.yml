@@ -1,4 +1,5 @@
-- hosts: "{{ vm_name }}"
+- hosts: "{{ vm_name }}" 
+  ansible_become: true
   gather_facts: False
   connection: local
 
