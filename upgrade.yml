@@ -3,11 +3,16 @@
   connection: local
 
   tasks:
+    - name: Creates directory
+      file:
+        path: /src/www
+        state: directory
+        
     - name: install updates
 #     become: yes
 #     become_user: root
       yum: 
         name: '*' 
         state: latest 
-        use_backend: yum4
+#       use_backend: yum4
 
