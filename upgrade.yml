@@ -1,11 +1,11 @@
 - hosts: "{{ vm_name }}" 
-  gather_facts: False
+  gather_facts: true
   connection: local
 
   tasks:
     - name: install updates
-      become: yes
-      become_user: root
+#     become: yes
+#     become_user: root
       yum: 
         name: '*' 
         state: latest 
